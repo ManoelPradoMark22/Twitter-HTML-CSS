@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Twitter</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header id="main-header">
+    <div class="content">
+      <nav>
+        <ul>
+        <!--no flexbox, qnd dentro de uma li tem uma img e um texto,
+        eles são tratados como elementos diferentes, permitindo muita
+      flexibilidade! como o alinhamento do texto e da imagem-->
+          <li><img src="/images/Header/home.svg" alt="Home"> Home</li>
+          <li><img src="/images/Header/notification.svg" alt="Notifications"> Notifications</li>
+          <li><img src="/images/Header/message.svg" alt="Messages"> Messages</li>
+        </ul>
+      </nav>
+      <img src="/images/Header/logo.svg" alt="Logo Twitter">
+      <div class="side">
+        <input type="text" placeholder="Search on Twitter">
+        <img src="/images/Header/manoel.jpg" alt="">
+        <button>Tweet</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="banner">
+    <ul>
+      <li><h1>Twitter Bootcamp Rocketseat</h1></li>
+      <li class="insta"><img src="/images/banner/instagramicon.png" alt="Instagram"><h1>manoelprado9</h1></li>
+      <li class="github"><img src="/images/banner/icongithub.svg" alt="github"><h1>ManoelPradoMark22</h1></li>
+    </ul>
+  </div>
+
+  <div class="bar">
+    <div class="content">
+      <ul>
+        <li class="active">
+          <span>Tweets</span>
+          <strong>1234</strong>
+          <!--::after o after se posiciona aqui, antes de fechar-->
+        </li>
+        <li>
+          <span>Followings</span>
+          <strong>7465</strong>
+        </li>
+        <li>
+          <span>Followers</span>
+          <strong>10235</strong>
+        </li>
+        <li>
+          <span>Favorites</span>
+          <strong>75</strong>
+        </li>
+      </ul>
+  
+      <div class="actions">
+        <button>Follow</button>
+        <img src="/images/Barra Superior/more.svg" alt="More">
+      </div>
+    </div>
+  </div>
+
+  <div class="wrapper-content content"> <!--usando a classe content para alinhar a largura max-->
+    <aside class="profile">
+      <img class="avatar" src="/images/Profile/beach.jpg" alt="Manoel Prado" >
+      <h1>Manoel Prado</h1>
+      <span>@Manoel_Prado_MP</span>
+      <p>Desenvolvedor FullStack Multiplataforma em constante aprimoramento. Amante de NodeJS, ReactJS e React Native. Aluno do BootCamp da Rocketseat.</p>
+
+      <ul class="list">
+        <li><img src="/images/Profile/place.svg" alt="Place"> Ibiajara, Bahia</li>
+        <li><img src="/images/Profile/url.svg" alt="URL"> github.com/ManoelPradoMark22</li>
+        <li><img src="/images/Profile/joined.svg" alt="Joined"> Joined May 2012</li>
+        <li><img src="/images/Profile/born.svg" alt="Born"> Born the 13th of March 1996</li>
+      </ul>
+
+      <div class="widget followers">
+        <strong><img src="/images/Profile/followers.svg" alt="Followers"> 423 followers that you know</strong>
+
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+      </div>
+
+      <div class="widget images">
+          <strong><img src="/images/Profile/images.svg" alt="Images"> 2554 Photos and videos</strong>
+
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+
+    </aside>
+    <section class="timeline">
+      timeline
+    </section>
+    <aside class="widgets">
+      widgets
+    </aside>
+  </div>
+</body>
+</html>

@@ -1,0 +1,336 @@
+* { /*definindo para todos os elementos*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /*padding nao aumenta o widht ou heigth do elemento*/
+}
+
+body {
+  background: #E6ECF0;
+  font-family: 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  /*para a fonte ficar com o melhor estilo possivel*/
+}
+
+input, button { /*retira o outline dos input e buttons*/
+   outline: 0;
+}
+
+.content {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+/*HEADER*/
+header#main-header {
+  height: 46px;
+  background: #fff;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+  /*1 param: qnts px para a direita a nossa box-shadow se posiciona
+  2 param: qnts px para baixo ......
+  3 param: BLUR (qnts pixels ela se dissipa na tela)
+  4 param: cor em rgba
+  !!!! para deixar a nossa box-shadow por cima do banner, passamos essas
+  duas propriedades a seguir:*/
+  position: relative;
+  z-index:1 ; /*temos q colocar um z-index maior q zero*/
+}
+
+header#main-header .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+header#main-header nav ul {
+  display: flex;
+  list-style: none; /*retira a bolinha preta padrão da lista*/
+}
+
+header#main-header nav ul li {
+  display: flex;
+  align-items: center;
+
+  font-size: 13px;
+  color: #667580;
+  font-weight: bold;
+
+  margin-left: 30px
+}
+
+header#main-header nav ul li:first-child{
+  margin: 0; /*o primeiro item da lista nao tem a margem*/
+}
+
+header#main-header nav ul li img{
+  margin-right: 7px
+}
+
+header#main-header div.side {
+  display: flex;
+}
+
+header#main-header div.side input{
+  width: 220px;
+  border: 1px solid #e6ecf0;
+  height: 34px;
+  padding: 0 30px 0 12px; /*qnd colocamos 4 valores vai no sentido horario*/
+  border-radius: 16px;
+  color: #667581;
+  font-size: 12px;
+  background: #f5f8fa url('/images/Header/search.svg') no-repeat 190px center;
+}
+
+header#main-header div.side img{
+  height: 34px;
+  width: 34px;
+  border-radius: 50%; /*totalmente redondo*/
+  margin: 0 15px; /*0 na vertical e 15 nas laterais (horizontal)*/
+}
+
+header#main-header div.side button {
+   height: 34px;
+   background: #3bb9e3;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   width: 90px;
+   font-weight: bold;
+   font-size: 14px;
+   color: #fff;
+   border: 0;
+   border-radius: 16px;
+}
+
+/*BANNER*/
+div.banner {
+  height: 380px;
+  width: 100%;
+  background: #3bb9e3;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+div.banner li {
+  list-style: none;
+}
+
+div.banner li.insta {
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+div.banner li.github {
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+div.banner h1 {
+  padding-left: 5px;
+}
+
+div.banner img{
+  height: 25px;
+  width: 25px;
+}
+
+
+/*BARRA SUPERIOR*/
+div.bar {
+  height: 59px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+div.bar .content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 285px;
+  height: 100%;
+}
+
+div.bar .content ul {
+  display: flex;
+  list-style: none;
+
+  height: 100%;
+}
+
+div.bar .content ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0 15px;
+  position : relative;
+}
+
+div.bar .content ul li.active::after {
+  /*permite criar um elemento pelo CSS*/
+  content: '';/*propriedade obrigatória*/
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #3bb9e3;
+
+}
+
+div.bar .content ul li span {
+  color: #667580;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+div.bar .content ul li strong {
+  color: #667580;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 2px;
+}
+
+div.bar .content ul li.active strong {
+  color: #3bb9e3;
+}
+div.bar .content .actions {
+  display: flex;
+}
+
+div.bar .content .actions button {
+  height: 34px;
+  background: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 90px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #3bb9e3;
+  border: 1px solid #3bb9e3;
+  border-radius: 16px;
+  margin-right: 20px;
+}
+
+div.wrapper-content {
+  display: flex;
+
+}
+
+div.wrapper-content aside.profile {
+  width: 260px;
+}
+
+div.wrapper-content aside.profile img.avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  margin-top: -130px; /*negativo para ficar por cima da barra e do banner*/
+}
+
+div.wrapper-content aside.profile h1 {
+  font-size: 21px;
+  color: #1f2226;
+  margin-top: 10px;
+}
+
+div.wrapper-content aside.profile span {
+  font-size: 14px;
+  color: #53626c;
+}
+
+div.wrapper-content aside.profile p {
+  font-size: 14px;
+  color: #1f2226;
+  margin-top: 15px;
+}
+
+div.wrapper-content aside.profile ul {
+  list-style: none;
+  margin-top: 20px;
+}
+
+div.wrapper-content aside.profile ul.list li  {
+  /*colocamos uma classe no ul para nao alterar os outros ul mais à frente!*/
+  font-size: 14px;
+  color: #657786;
+
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+
+div.wrapper-content aside.profile li:first-child{
+  /*na primeira li nao precisa ter a margem*/
+  margin: 0;
+}
+
+div.wrapper-content aside.profile img {
+  margin-right: 10px;
+}
+
+div.wrapper-content aside.profile .widget {
+  margin-top: 20px;
+}
+
+div.wrapper-content aside.profile .widget strong{
+  font-weight: normal;
+  color: #3bb9e3;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+div.wrapper-content aside.profile .widget strong img {
+  margin-right: 5px;
+}
+
+div.wrapper-content aside.profile .followers ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap; /*para quebrar a linha qnd necessario*/
+}
+
+div.wrapper-content aside.profile .followers ul li {
+  width: 45px;
+  height: 45px;
+  background: #D0D5D9;
+  border-radius: 50%;
+  /*flex-shrink: 0; para nao espremer
+  flex-grow: 1; para aumentar caso seja necessario*/
+  flex: 1 0 auto;
+  margin: 0 5px 5px 0; /*"0px topo", "5px direita", "5px embaixo" e "0px esquerda"   */
+}
+
+div.wrapper-content aside.profile .images ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap; 
+}
+
+div.wrapper-content aside.profile .images ul li {
+  width: 80px;
+  height: 80px;
+  background: #D0D5D9;
+  border-radius: 8px;
+  flex: 1 0 auto;
+  margin: 0 5px 5px 0;
+}
